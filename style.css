@@ -1,0 +1,120 @@
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 13px;
+    background: hsl(210, 46%, 95%);
+}
+
+.card-container {
+    width: 95vw;
+    margin: 50px 0;
+    display: grid;
+    grid-gap: 25px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.card header {
+    display: flex;
+    align-items: center;
+}
+
+.card header img {
+    border-radius: 50%;
+    margin-right: 25px;
+    border: 3px solid rgba(255, 255, 255, 0.3)
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.purple {
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 95% 10%;
+}
+
+.grey {
+    background-color: hsl(217, 19%, 35%)
+}
+
+.dark {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.white {
+    background-color: white;
+}
+
+.purple, .dark, .grey {
+    color: white;
+}
+
+.name {
+    font-size: 15px;
+}
+
+.title {
+    opacity: 50%;
+}
+
+.quote {
+    opacity: 70%;
+    line-height: 20px;
+}
+
+
+
+@media only screen and (min-width: 900px) {
+
+    body {
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    .card-container {
+        max-width: 80vw;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 0;
+    }
+
+    .purple {
+        grid-column: 1 / 3;
+        order: 1;
+    }
+
+    .grey {
+        grid-column: 3 / 4;
+        order: 2;
+    }
+
+    .dark {
+        grid-column: 2 / 4;
+        order: 5;
+    }
+
+    #kira {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+        order: 3;
+    }
+
+    #jeanette {
+       order: 4;
+    }
+
+    .attribution {
+    position: absolute;
+    bottom: 0;
+}
+
+}
